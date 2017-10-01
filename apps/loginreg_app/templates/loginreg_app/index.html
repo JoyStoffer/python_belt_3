@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Log in/Registration</title>
+  </head>
+  <body>
+    <!--Errors -->
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    <!--End Errors -->
+    <h1>Register</h1>
+    <form action= "{% url 'register'%}" method="post">
+      {% csrf_token%}
+      <label>Name:</label>
+      <input type="text" name="name" />
+
+      <label>Alias:</label>
+      <input type="text" name="alias" />
+
+      <label>Email:</label>
+      <input type="email" name="email" />
+
+      <label>Password:</label>
+      <input type="password" name="password" />
+
+      <label>Confirm Password:</label>
+      <input type="password" name="password_confirmation" />
+
+      <label>Date of Birth:</label>
+      <input type="date" name="birth_date" />
+
+      <input type="submit" value="Register">
+    </form>
+
+    <h1>Login</h1>
+    <form action= "{% url 'login'%}" method="post">
+      {% csrf_token%}
+
+      <label>Email:</label>
+      <input type="email" name="email" />
+
+      <label>Password:</label>
+      <input type="password" name="password" />
+
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>

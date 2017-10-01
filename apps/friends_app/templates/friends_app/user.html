@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{user.alias}}</title>
+  </head>
+  <body>
+    <!-- log out and home buttons -->
+    <p>
+      <a href="{% url 'all_friends' %}">Home</a>
+      <a href="{% url 'logout' %}">Logout</a>
+    </p>
+    <!-- logout and home buttons -->
+
+    <h3>{{user.alias}}'s Profile</h3>
+    <p>Name: {{user.name}}</p>
+    <p>Email Address: {{user.email}}</p>
+  </body>
+</html>
