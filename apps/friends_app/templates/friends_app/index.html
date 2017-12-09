@@ -2,60 +2,70 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../../static/friends/master.css">
     <title>All Friends</title>
   </head>
   <body>
-    <!-- log out and home buttons -->
-    <p>
-      <a href="{% url 'logout' %}">Logout</a>
-    </p>
-    <!-- logout and home buttons -->
+       <div class="wrapper">
+            <div class="header">
+                 <!-- log out and home buttons -->
+                 <p id="logout">
+                      <a href="{% url 'logout' %}"><button>Logout</button></a>
+                 </p>
+                 <!-- logout and home buttons -->
 
-    <h2>Hello, {{user.alias}}</h2>
+            </div>
 
-    <h3> Here is a list of your friends:</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% if friends %}
-            {% for friend in friends %}
-              <tr>
-                <td>{{ friend.alias }}</a></td>
-                <td>
-                  <a href="{% url 'user_page' id=friend.id %}">View Profile</a>
-                  <a href="{% url 'remove_friend' id=friend.id %}">Remove as Friend</a>
-                </td>
-              </tr>
-            {% endfor %}
-          {% else %}
-            <p>You do not currently have friends</p>
-          {% endif %}
-        </tbody>
-      </table>
 
-    <h3>Other Users not on your friend's list:</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
+     <h2>Hello, {{user.alias}}</h2>
 
-          {% for person in people %}
-            <tr>
-              <td><a href="{% url 'user_page' id=person.id %}">{{ person.alias }}</a></td>
-              <td><a href="{% url 'add_friend' id=person.id %}"><button>Add as Friend</button></a></td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+         <div class="currentfriends">
+              <h3> Here is a list of your friends:</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name (click for profile)</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% if friends %}
+                      {% for friend in friends %}
+                        <tr>
+                          <td><a href="{% url 'user_page' id=friend.id %}"><button>{{ friend.alias }}'s Profile</button></a></td>
+                          <td>
+                            <a href="{% url 'remove_friend' id=friend.id %}"><button>Remove as Friend</button></a>
+                          </td>
+                        </tr>
+                      {% endfor %}
+                    {% else %}
+                      <p>You do not currently have friends</p>
+                    {% endif %}
+                  </tbody>
+                </table>
+          </div>
+
+          <div class="otherpeople">
+              <h3>Other People not on your friend's list:</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name (click for profile)</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    {% for person in people %}
+                      <tr>
+                        <td><a href="{% url 'user_page' id=person.id %}"><button>{{ person.alias }}</button></a></td>
+                        <td><a href="{% url 'add_friend' id=person.id %}"><button>Add as Friend</button></a></td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+           </div>
+     </div>
 
   </body>
 </html>

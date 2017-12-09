@@ -2,18 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../../static/friends/master.css">
     <title>{{user.alias}}</title>
   </head>
   <body>
-    <!-- log out and home buttons -->
-    <p>
-      <a href="{% url 'all_friends' %}">Home</a>
-      <a href="{% url 'logout' %}">Logout</a>
-    </p>
-    <!-- logout and home buttons -->
+       <div class="wrapper">
+            <div class="header">
 
-    <h3>{{user.alias}}'s Profile</h3>
-    <p>Name: {{user.name}}</p>
-    <p>Email Address: {{user.email}}</p>
+              <!-- log out and home buttons -->
+              <p>
+                <a href="{% url 'all_friends' %}"><button>Home</button></a>
+                <a href="{% url 'logout' %}"><button>Logout</button></a>
+              </p>
+            </div>
+              <!-- logout and home buttons -->
+
+         <h3>{{user.alias}}'s Profile</h3>
+         <p>Name: {{user.name}}</p>
+         <p>Email Address: {{user.email}}</p>
+
+     </div>
   </body>
 </html>

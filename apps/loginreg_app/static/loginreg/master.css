@@ -1,0 +1,97 @@
+* {
+     margin: 5px;
+     padding: 5px;
+     background-color: #296672;
+
+}
+.header{
+     text-align: center;
+}
+.wrapper{
+     min-width: 1000px;
+    height: 100%;
+    position: absolute;
+    min-height: 1000px;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #296672;
+
+}
+.registration{
+     display: inline-block;
+     vertical-align: top;
+}
+.login{
+     display: inline-block;
+     vertical-align: top;
+}
+.button{
+     background-color: #ae9e7d;
+     box-shadow: 5px 3px 10px #353432;
+     border-radius: 10px;
+     height: 40px;
+     width: 100px;
+     margin-left: 325px;
+     font-size: medium;
+}
+label{
+     font-family: sans-serif;
+     font-size: 20px;
+}
+input{
+     background-color: #c9c8ba;
+     box-shadow: 5px 3px 10px #353432;
+     border-radius: 10px;
+}
+#name{
+     width: 200px;
+     padding-bottom: 15px;
+     padding-top: 5px;
+     padding-left: 10px;
+     margin-left: 121px;
+     font-size: 20px;
+     font-family: sans-serif;
+     height: 15px;
+
+}
+#alias{
+     width: 200px;
+     padding-bottom: 15px;
+     padding-top: 5px;
+     padding-left: 10px;
+     margin-left: 130px;
+     font-size: 20px;
+     font-family: sans-serif;
+     height: 15px;
+
+}
+.email{
+     width: 200px;
+     padding-bottom: 15px;
+     padding-top: 5px;
+     padding-left: 10px;
+     margin-left: 126px;
+     font-size: 20px;
+     font-family: sans-serif;
+     height: 15px;
+}
+.password{
+     width: 200px;
+     padding-bottom: 15px;
+     padding-top: 5px;
+     padding-left: 10px;
+     margin-left: 90px;
+     font-size: 20px;
+     font-family: sans-serif;
+     height: 15px;
+}
+#passconf{
+     width: 200px;
+     padding-bottom: 15px;
+     padding-top: 5px;
+     padding-left: 10px;
+     margin-left: 15px;
+     font-size: 20px;
+     font-family: sans-serif;
+     height: 15px;
+}

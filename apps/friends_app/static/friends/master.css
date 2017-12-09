@@ -1,0 +1,52 @@
+* {
+     margin: 0px;
+     padding: 5px;
+     background-color: #296672;
+
+}
+.wrapper{
+
+     min-width: 1000px;
+     position: absolute;
+     top: 50px;
+     max-width: 100%;
+     overflow-x: hidden;
+     background-color: #296672;
+     min-height: 1000px;
+     max-height: 100%;
+}
+#logout{
+     text-align: left;
+}
+.currentfriends{
+     display: inline-block;
+     vertical-align: top;
+}
+.otherpeople {
+     display: inline-block;
+     vertical-align: top;
+}
+button{
+     background-color: #ae9e7d;
+     box-shadow: 5px 3px 10px #353432;
+     border-radius: 10px;
+     height: 30px;
+     width: 135px;
+     font-size: 14px;
+}
+p{
+     font-family: sans-serif;
+     font-size: 16px;
+}
+a{
+     font-family: sans-serif;
+     font-size: 16px;
+}
+table{
+     font-family: sans-serif;
+     font-size: 16px;
+}
+/*td{
+     font-family: sans-serif;
+     font-size: 16px;
+}*/
